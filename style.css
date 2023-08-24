@@ -169,7 +169,8 @@ strong {
   height: 40px;
   border: none;
   background: url(assets/menu-big.png) no-repeat;
-  background-size: 100%;
+  background-size: 90%;
+  background-position: center;
   cursor: pointer;
 }
 
