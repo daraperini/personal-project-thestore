@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="page__title">Welcome to <br /><strong>The Store</strong></h1>
+    </header>
+
+    <section class="organize-page">
+      <div class="organize-page__options">
+        <input
+          type="search"
+          id="search"
+          class="organize-page__search"
+          placeholder="Search your product"
+        />
+        <button
+          type="button"
+          id="organize-page__options__btn"
+          class="organize-page__options__btn"
+        ></button>
+
+        <select
+          name="organize-page__items-order"
+          id="organize-page__items-order"
+          class="organize-page__items-order"
+        >
+          <option
+            class="organize-page__items-order__option"
+            value="Price: Low to High"
+          >
+            Price: Low to High
+          </option>
+          <option
+            class="organize-page__items-order__option"
+            value="Price: High to Low"
+          >
+            Price: High to Low
+          </option>
+          <option class="organize-page__items-order__option" value="A to Z">
+            A to Z
+          </option>
+          <option class="organize-page__items-order__option" value="Z to A">
+            Z to A
+          </option>
+        </select>
+      </div>
+    </section>
+
+    <section class="products" id="products"></section>
+
+    <footer class="footer">
+      <h3 class="footer__title">The Store</h3>
+      <ul class="footer__informations">
+        Contact us:
+        <li>store@contact.com</li>
+        <li>55+ (54) 3030-0000</li>
+      </ul>
+      <p class="footer__credits">Developted by Dara L. Perini</p>
+      <p class="footer__credits">daraperini@gmail.com</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
