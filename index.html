@@ -13,63 +13,98 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="page__title">Welcome to <br /><strong>The Store</strong></h1>
-    </header>
+    <layer id="layer__page-content" class="layer__page-content">
+      <header class="header">
+        <h1 class="page__title">Welcome to <br /><strong>The Store</strong></h1>
+        <div class="shopping-cart">
+          <button
+            type="button"
+            id="shopping-cart__button"
+            class="shopping-cart__button"
+          ><div class="shopping-cart__button__counter"></div></button>
 
-    <section class="organize-page">
-      <div class="organize-page__options">
-        <input
-          type="search"
-          id="search"
-          class="organize-page__search"
-          placeholder="Search your product"
-        />
-        <button
-          type="button"
-          id="organize-page__options__btn"
-          class="organize-page__options__btn"
-        ></button>
+          <layer id="layer__shopping-cart" class="layer__shopping-cart">
+            <div class="shopping-cart__display">
+              <button
+                type="button"
+                id="shopping-cart__button__close-tab"
+                class="shopping-cart__button__close-tab"
+              >
+                X
+              </button>
+              <ul class="shopping-cart__list"></ul>
 
-        <select
-          name="organize-page__items-order"
-          id="organize-page__items-order"
-          class="organize-page__items-order"
-        >
-          <option
-            class="organize-page__items-order__option"
-            value="Price: Low to High"
+              <div class="shopping-cart__total-price__container">
+                <h3 class="shopping-cart__total-price__title">Total</h3>
+                <div class="shopping-cart__total-price">$0,00</div>
+              </div>
+              <button
+                type="submit"
+                id="shopping-cart__button__buy"
+                class="shopping-cart__button__buy"
+              >
+                Proceed to checkout
+              </button>
+            </div>
+          </layer>
+        
+        </div>
+      </header>
+
+      <section class="organize-page">
+        <div class="organize-page__options">
+          <input
+            type="search"
+            id="search"
+            class="organize-page__search"
+            placeholder="Search your product"
+          />
+          <button
+            type="button"
+            id="organize-page__options__btn"
+            class="organize-page__options__btn"
+          ></button>
+
+          <select
+            name="organize-page__items-order"
+            id="organize-page__items-order"
+            class="organize-page__items-order"
           >
-            Price: Low to High
-          </option>
-          <option
-            class="organize-page__items-order__option"
-            value="Price: High to Low"
-          >
-            Price: High to Low
-          </option>
-          <option class="organize-page__items-order__option" value="A to Z">
-            A to Z
-          </option>
-          <option class="organize-page__items-order__option" value="Z to A">
-            Z to A
-          </option>
-        </select>
-      </div>
-    </section>
+            <option
+              class="organize-page__items-order__option"
+              value="Price: Low to High"
+            >
+              Price: Low to High
+            </option>
+            <option
+              class="organize-page__items-order__option"
+              value="Price: High to Low"
+            >
+              Price: High to Low
+            </option>
+            <option class="organize-page__items-order__option" value="A to Z">
+              A to Z
+            </option>
+            <option class="organize-page__items-order__option" value="Z to A">
+              Z to A
+            </option>
+          </select>
+        </div>
+      </section>
 
-    <section class="products" id="products"></section>
+      <section class="products" id="products"></section>
 
-    <footer class="footer">
-      <h3 class="footer__title">The Store</h3>
-      <ul class="footer__informations">
-        Contact us:
-        <li>store@contact.com</li>
-        <li>55+ (54) 3030-0000</li>
-      </ul>
-      <p class="footer__credits">Developted by Dara L. Perini</p>
-      <p class="footer__credits">daraperini@gmail.com</p>
-    </footer>
+      <footer class="footer">
+        <h3 class="footer__title">The Store</h3>
+        <ul class="footer__informations">
+          Contact us:
+          <li>store@contact.com</li>
+          <li>55+ (54) 3030-0000</li>
+        </ul>
+        <p class="footer__credits">Developted by Dara L. Perini</p>
+        <p class="footer__credits">daraperini@gmail.com</p>
+      </footer>
+    </layer>
 
     <script src="main.js"></script>
   </body>
