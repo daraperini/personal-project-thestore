@@ -17,12 +17,14 @@
       <header class="header">
         <h1 class="page__title">Welcome to <br /><strong>The Store</strong></h1>
         <div class="shopping-cart">
-          <button
-            type="button"
-            id="shopping-cart__button"
-            class="shopping-cart__button"
-          ><div class="shopping-cart__button__counter"></div></button>
-
+          <div class="shopping-cart__button__container">
+            <div class="shopping-cart__button__counter"></div>
+            <button
+              type="button"
+              id="shopping-cart__button"
+              class="shopping-cart__button"
+            ></button>
+          </div>
           <layer id="layer__shopping-cart" class="layer__shopping-cart">
             <div class="shopping-cart__display">
               <button
@@ -47,7 +49,6 @@
               </button>
             </div>
           </layer>
-        
         </div>
       </header>
 

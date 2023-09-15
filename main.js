@@ -194,8 +194,8 @@ items.forEach((item) => {
 
 //shopping cart layer
 
-const itensInShoppingCart = JSON.parse(localStorage.getItem("itens")) || [];
-const priceItensInShoppingCart = JSON.parse(localStorage.getItem("itens")) || [];
+const shoppingCartList = document.querySelector(".shopping-cart__list");
+const shoppingCart = JSON.parse(localStorage.getItem("itensInShoppingCart")) || [];;
 
 const showShoppingCart = () => {
   shoppingCartLayer.classList.add("layer__shopping-cart--active");
@@ -216,9 +216,6 @@ const closeShoppingCartBtn = document.getElementById(
   "shopping-cart__button__close-tab"
 );
 closeShoppingCartBtn.addEventListener("click", closeShoppingCart);
-
-const shoppingCartList = document.querySelector(".shopping-cart__list");
-const shoppingCart = [];
 
 const createShoppingCartItem = (item) => {
   const itemShoppingCart = document.createElement("li");
@@ -289,10 +286,7 @@ const addItemInShoppingCart = (item) => {
   purchaseTotalPrice();
   cartItemsCounter();
 
-
-  // itensInShoppingCart.push = shoppingCart
-  // localStorage.setItem("itensInShoppingCart", JSON.parse(shoppingCart));
-
+  localStorage.setItem("itensInShoppingCart", JSON.stringify(shoppingCart));
 };
 
 const removeProductFromShoppingCart = (item) => {
@@ -310,10 +304,7 @@ const removeProductFromShoppingCart = (item) => {
   purchaseTotalPrice();
   cartItemsCounter();
 
-
-  // itensInShoppingCart.push = shoppingCart
-  // localStorage.setItem("itensInShoppingCart", JSON.parse(shoppingCart));
-
+  localStorage.setItem("itensInShoppingCart", JSON.stringify(shoppingCart));
 };
 
 const changeItemQuantity = (item, e) => {
@@ -331,8 +322,7 @@ const changeItemQuantity = (item, e) => {
   purchaseTotalPrice();
   cartItemsCounter();
 
-  // itensInShoppingCart.push = shoppingCart;
-  // localStorage.setItem("itensInShoppingCart", JSON.parse(shoppingCart));
+  localStorage.setItem("itensInShoppingCart", JSON.stringify(shoppingCart));
 };
 
 const purchaseTotalPrice = () => {
@@ -346,11 +336,6 @@ const purchaseTotalPrice = () => {
     ".shopping-cart__total-price"
   );
   totalPriceContainer.innerHTML = `$ ${totalPrice},00`;
-
-  // localStorage.setItem("itensInShoppingCart", JSON.parse(shoppingCart));
-  localStorage.setItem("priceItensInShoppingCart", totalPrice);
-
-
 };
 
 const cartItemsCounter = () => {
@@ -365,3 +350,11 @@ const cartItemsCounter = () => {
   );
   cartItemsCounterContainer.innerHTML = numberOfItems;
 };
+
+// manteins shopping cart data after reloading page
+shoppingCart.forEach((item) => {
+  createShoppingCartItem(item);
+})
+
+purchaseTotalPrice();
+cartItemsCounter();
