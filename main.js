@@ -351,7 +351,7 @@ const cartItemsCounter = () => {
   cartItemsCounterContainer.innerHTML = numberOfItems;
 };
 
-// manteins shopping cart data after reloading page
+// maintains shopping cart data after reloading page
 shoppingCart.forEach((item) => {
   createShoppingCartItem(item);
 })
